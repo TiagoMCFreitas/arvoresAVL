@@ -1,4 +1,5 @@
 package arvoresavl;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -9,7 +10,8 @@ public class ArvoresAVL {
         String value;
         Node left, right;
         int height;
-        ArrayList<String> listaDePalavras  = new ArrayList<>();
+        ArrayList<String> listaDePalavras = new ArrayList<>();
+
         Node(String value) {
             this.value = value;
             height = 1;
@@ -21,43 +23,58 @@ public class ArvoresAVL {
     public void insert(String value) {
         root = insert(root, value);
     }
+
     public void removerPalavra(String palavra) {
         Node no = find(root, String.valueOf(palavra.charAt(0)));
-        no.listaDePalavras.remove(palavra);
+        
+            no.listaDePalavras.remove(palavra);
         
     }
-    public void addPalavra(String palavra){
-          Node no = find(root, String.valueOf(palavra.charAt(0)));
-          no.listaDePalavras.add(palavra);
+
+    public boolean acharPalavras(String palavra){
+        Node no = find(root, String.valueOf(palavra.charAt(0)));
+        for(int i = 0; i < no.listaDePalavras.size(); i ++){
+            if(no.listaDePalavras.get(i).equals(palavra)){
+                return true;
+            }
+        }
+        return false;
     }
-    public ArrayList<String> getLista(String letra){
-    
+
+    public void addPalavra(String palavra) {
+        Node no = find(root, String.valueOf(palavra.charAt(0)));
+        no.listaDePalavras.add(palavra);
+
+        
+    }
+
+    public ArrayList<String> getLista(String letra) {
+
         return find(root, letra).listaDePalavras;
-    }    
+    }
 
     public Node find(String value) {
-    return find(root, value);
+        return find(root, value);
     }
 
-private Node find(Node node, String value) {
-    if (node == null) {
-        return null;
+    private Node find(Node node, String value) {
+        if (node == null) {
+            return null;
+        }
+        if (node.value.equals(value)) {
+            return node;
+        }
+        if (value.compareTo(node.value) < 0) {
+            return find(node.left, value);
+        } else {
+            return find(node.right, value);
+        }
     }
-    if (node.value.equals(value)) {
-        return node;
-    }
-    if (value.compareTo(node.value) < 0) {
-        return find(node.left, value);
-    } else {
-        return find(node.right, value);
-    }
-}
-
 
     private Node insert(Node node, String value) {
         if (node == null) {
             return new Node(value);
-            
+
         }
 
         if (value.compareTo(node.value) < 0) {
@@ -67,7 +84,7 @@ private Node find(Node node, String value) {
         } else {
             return node;
         }
-        
+
         node.height = 1 + Math.max(height(node.left), height(node.right));
 
         int balance = getBalance(node);
@@ -132,7 +149,7 @@ private Node find(Node node, String value) {
 
         return rightChild;
     }
-    
+
     private Node delete(Node node, String value) {
         if (node == null) {
             return null;
@@ -172,10 +189,12 @@ private Node find(Node node, String value) {
         // Reequilibra a árvore após a exclusão
         return balance(node);
     }
-        private int balanceFactor(Node node) {
+
+    private int balanceFactor(Node node) {
         return height(node.left) - height(node.right);
     }
-     private Node balance(Node node) {
+
+    private Node balance(Node node) {
         if (node == null) {
             return null;
         }
@@ -238,12 +257,13 @@ private Node find(Node node, String value) {
     }
 
     private void preOrderTraversal(Node node) {
-    if (node != null) {
-        System.out.print(node.value + " ");
-        preOrderTraversal(node.left);
-        preOrderTraversal(node.right);
+        if (node != null) {
+            System.out.print(node.value + " ");
+            preOrderTraversal(node.left);
+            preOrderTraversal(node.right);
+        }
     }
-    }
+
     public void postOrderTraversal() {
         postOrderTraversal(root);
     }
@@ -274,6 +294,7 @@ private Node find(Node node, String value) {
             }
         }
     }
+
     private void printAVLTree(Node node, String indent, boolean last) {
         if (node != null) {
             System.out.print(indent);
@@ -291,11 +312,7 @@ private Node find(Node node, String value) {
         }
     }
 
-    
     public void printAVLTree() {
-    	printAVLTree(root, "", true);
+        printAVLTree(root, "", true);
     }
 }
-
-    
-    
