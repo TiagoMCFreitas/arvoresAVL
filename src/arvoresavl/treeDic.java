@@ -61,8 +61,8 @@ public class treeDic {
             do {
                 for (String stri : dicioo) {
                     if (stri.indexOf(letras[pog]) == 0 || stri.indexOf(letras[pog].toLowerCase()) == 0) {
-                        palavrasTemp.add(stri);
                         arvore.insert(letras[pog]);
+                        arvore.addPalavra(stri);
                     }
                     
                 }
@@ -81,7 +81,7 @@ public class treeDic {
                 arvore.printAVLTree();
                 System.out.println("1 - Buscar palavras");
                 System.out.println("2 - Exibir palavras");
-                System.out.println("3 - Excluir palavras");
+                System.out.println("3 - Excluir Letras");
                 System.out.println("4 - Sair");
                 opc = entrada.nextInt();
                 
@@ -125,18 +125,28 @@ public class treeDic {
                         if (arvore.contains(letras[cont]) == true && letras[cont].equalsIgnoreCase(opcL)) {
                             System.out.println(PalavrasPos.get(cont));
                             }
-
-                        else if(opc == 3){
-                            
-                        }
                     }
-                    }else if(opc == 4){
+                }
+                        else if(opc == 3){
+                            System.out.println("Informe a letra a ser removida: ");
+                            String letra = entrada.next();
+                            for (int i = 0; i < letras.length; i++) {
+                             if (arvore.contains(letras[i]) == true && letras[i].equalsIgnoreCase(letra)) {
+                                 PalavrasPos.remove(i);
+                                 arvore.delete(letra.toUpperCase());
+                                 arvore.printAVLTree();
+                             }
+                            
+                            }
+                            System.out.println("Letra Removida!");
+                        }else if(opc == 4){
                     System.out.println("Saiu :(");
                     System.exit(0);
-                }
-                }
+            }
+            }
             }catch (Exception err) {
             System.out.println(err);
-        }
-        }
+        
+            }
+         }
     }

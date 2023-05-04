@@ -1,4 +1,5 @@
 package arvoresavl;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -8,7 +9,7 @@ public class ArvoresAVL {
         String value;
         Node left, right;
         int height;
-
+        ArrayList<String> listaDePalavras  = new ArrayList<>();
         Node(String value) {
             this.value = value;
             height = 1;
@@ -20,10 +21,38 @@ public class ArvoresAVL {
     public void insert(String value) {
         root = insert(root, value);
     }
+    public void addPalavra(String palavra){
+          Node no = find(root, String.valueOf(palavra.charAt(0)));
+          no.listaDePalavras.add(palavra);
+    }
+    public ArrayList<String> getLista(String letra){
+    
+        return find(root, letra).listaDePalavras;
+    }    
+
+    public Node find(String value) {
+    return find(root, value);
+    }
+
+private Node find(Node node, String value) {
+    if (node == null) {
+        return null;
+    }
+    if (node.value.equals(value)) {
+        return node;
+    }
+    if (value.compareTo(node.value) < 0) {
+        return find(node.left, value);
+    } else {
+        return find(node.right, value);
+    }
+}
+
 
     private Node insert(Node node, String value) {
         if (node == null) {
             return new Node(value);
+            
         }
 
         if (value.compareTo(node.value) < 0) {
@@ -33,7 +62,7 @@ public class ArvoresAVL {
         } else {
             return node;
         }
-
+        
         node.height = 1 + Math.max(height(node.left), height(node.right));
 
         int balance = getBalance(node);
@@ -98,7 +127,79 @@ public class ArvoresAVL {
 
         return rightChild;
     }
+    public void delete(String key) {
+        root = delete(root, key);
+    }
+    private Node delete(Node node, String value) {
+        if (node == null) {
+            return null;
+        }
 
+        // Encontra o nó a ser excluído
+        int cmp = value.compareTo(node.value);
+        if (cmp < 0) {
+            node.left = delete(node.left, value);
+        } else if (cmp > 0) {
+            node.right = delete(node.right, value);
+        } else { // O nó atual é o nó a ser excluído
+            // Caso 1: o nó a ser excluído é uma folha
+            if (node.left == null && node.right == null) {
+                node = null;
+            }
+            // Caso 2: o nó a ser excluído tem apenas um filho
+            else if (node.left == null) {
+                node = node.right;
+            } else if (node.right == null) {
+                node = node.left;
+            }
+            // Caso 3: o nó a ser excluído tem dois filhos
+            else {
+                // Encontra o sucessor (menor valor na subárvore direita)
+                Node successor = node.right;
+                while (successor.left != null) {
+                    successor = successor.left;
+                }
+                // Copia o valor do sucessor para o nó atual
+                node.value = successor.value;
+                // Remove o sucessor
+                node.right = delete(node.right, successor.value);
+            }
+        }
+
+        // Reequilibra a árvore após a exclusão
+        return balance(node);
+    }
+        private int balanceFactor(Node node) {
+        return height(node.left) - height(node.right);
+    }
+     private Node balance(Node node) {
+        if (node == null) {
+            return null;
+        }
+
+        // Calcula o fator de balanceamento do nó atual
+        int balanceFactor = balanceFactor(node);
+
+        // Caso 1: o nó está desbalanceado para a esquerda
+        if (balanceFactor > 1) {
+            // Verifica se é uma rotação simples ou dupla
+            if (balanceFactor(node.left) < 0) {
+                node.left = leftRotate(node.left);
+            }
+            return rightRotate(node);
+        }
+        // Caso 2: o nó está desbalanceado para a direita
+        else if (balanceFactor < -1) {
+            // Verifica se é uma rotação simples ou dupla
+            if (balanceFactor(node.right) > 0) {
+                node.right = rightRotate(node.right);
+            }
+            return leftRotate(node);
+        }
+
+        // O nó está balanceado
+        return node;
+    }
     // Métodos de busca e percurso da árvore (não são necessários para a inserção)
 
     public boolean contains(String value) {
