@@ -21,6 +21,11 @@ public class ArvoresAVL {
     public void insert(String value) {
         root = insert(root, value);
     }
+    public void removerPalavra(String palavra) {
+        Node no = find(root, String.valueOf(palavra.charAt(0)));
+        no.listaDePalavras.remove(palavra);
+        
+    }
     public void addPalavra(String palavra){
           Node no = find(root, String.valueOf(palavra.charAt(0)));
           no.listaDePalavras.add(palavra);
@@ -127,9 +132,7 @@ private Node find(Node node, String value) {
 
         return rightChild;
     }
-    public void delete(String key) {
-        root = delete(root, key);
-    }
+    
     private Node delete(Node node, String value) {
         if (node == null) {
             return null;

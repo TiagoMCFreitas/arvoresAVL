@@ -58,11 +58,15 @@ public class treeDic {
             ArrayList<String> palavrasTemp = new ArrayList<>();
             ArrayList<String> PalavrasPos = new ArrayList<>();
             ArvoresAVL arvore = new ArvoresAVL();
+            for(int i = 0; i < letras.length; i ++){
+                arvore.insert(letras[i]);
+            }
+            arvore.printAVLTree();
+            
             do {
                 for (String stri : dicioo) {
-                    if (stri.indexOf(letras[pog]) == 0 || stri.indexOf(letras[pog].toLowerCase()) == 0) {
-                        arvore.insert(letras[pog]);
-                        arvore.addPalavra(stri);
+                    if (stri.indexOf(letras[pog]) == 0) {
+                        arvore.addPalavra(stri.toUpperCase());
                     }
                     
                 }
@@ -72,6 +76,7 @@ public class treeDic {
                 
             } while (pog < letras.length);
             
+                
             ArrayList<String> buscador = new ArrayList<>();
             int skr = 0;
             int opc = 0;
@@ -121,11 +126,13 @@ public class treeDic {
                     String opcL;
                     System.out.println("De qual letra quer que as palavras sejam exibidas?");
                     opcL = entrada.next();
-                    for (int cont = 0; cont < letras.length; cont++) {
-                        if (arvore.contains(letras[cont]) == true && letras[cont].equalsIgnoreCase(opcL)) {
-                            System.out.println(PalavrasPos.get(cont));
+                      System.out.println(arvore.getLista(opcL.toUpperCase()));
+                      try {
+                                Thread.sleep(2000);
+                            } catch (InterruptedException ex) {
+                                Logger.getLogger(treeDic.class.getName()).log(Level.SEVERE, null, ex);
                             }
-                    }
+                      System.out.println("\n");
                 }
                         else if(opc == 3){
                             System.out.println("Informe a letra a ser removida: ");
@@ -133,7 +140,7 @@ public class treeDic {
                             for (int i = 0; i < letras.length; i++) {
                              if (arvore.contains(letras[i]) == true && letras[i].equalsIgnoreCase(letra)) {
                                  PalavrasPos.remove(i);
-                                 arvore.delete(letra.toUpperCase());
+                                 arvore.removerPalavra(letra.toUpperCase());
                                  arvore.printAVLTree();
                              }
                             
