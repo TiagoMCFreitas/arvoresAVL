@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -84,7 +85,8 @@ public class treeDic {
                 System.out.println("1 - Buscar palavras");
                 System.out.println("2 - Exibir palavras");
                 System.out.println("3 - Excluir palavras");
-                System.out.println("4 - Sair");
+                System.out.println("4 - Busca binária");
+                System.out.println("5 - Sair");
                 opc = entrada.nextInt();
 
                 if (opc == 1) {
@@ -140,11 +142,43 @@ public class treeDic {
                         Logger.getLogger(treeDic.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                } else if (opc == 4) {
+                } else if (opc == 5) {
                     System.out.println("Saiu :(");
                     System.exit(0);
+                }else if(opc == 4){
+                    int qnt;
+                    String palavra;
+                    System.out.println("Quantas palavras deseja buscar?");
+                    qnt = entrada.nextInt();
+                    qnt += 1;
+
+                        for (int i = 1; i < qnt; i++) {
+                            System.out.println("Digite a " + i + "° palavra");
+                            palavra = entrada.next();
+                            buscador.add(palavra.toUpperCase());
+                        }
+                        
+                        for (int i = 0; i < buscador.size(); i++) {
+                            
+                               if(arvore.acharPalavras(buscador.get(i)) == true){
+                                System.out.println("A palavra foi achada na posição: " + arvore.binarySearch(buscador.get(i)));
+                               }else{
+                                System.out.println("A palavra: " + buscador.get(i) + ", não foi encontrada!");
+                               }
+
+                            }
+
+                            buscador.clear();
+                            try {
+                                Thread.sleep(2000);
+                            } catch (InterruptedException ex) {
+                                Logger.getLogger(treeDic.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                            
+                        }
+
                 }
-            }
+            
         } catch (Exception err) {
             System.out.println(err);
 

@@ -1,6 +1,7 @@
 package arvoresavl;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -24,11 +25,31 @@ public class ArvoresAVL {
         root = insert(root, value);
     }
 
+    public int binarySearch(String palavra){
+        Node no = find(root, String.valueOf(palavra.charAt(0)));
+        Collections.sort(no.listaDePalavras);
+
+        int comeco = 0;
+        int fim = no.listaDePalavras.size() - 1;
+        while(comeco <= fim){
+            int meio = (comeco + fim) / 2;
+            int cmp = palavra.compareTo(no.listaDePalavras.get(meio));
+            if(cmp ==0 ){
+                return meio;
+            }else if(cmp < 0){
+                fim = meio - 1;
+            }else{
+                comeco = meio + 1;
+            }
+        }
+        return -1;
+    }
+
     public void removerPalavra(String palavra) {
         Node no = find(root, String.valueOf(palavra.charAt(0)));
-        
+
             no.listaDePalavras.remove(palavra);
-        
+
     }
 
     public boolean acharPalavras(String palavra){
