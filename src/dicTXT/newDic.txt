@@ -2067,7 +2067,7 @@ açã
 Acã
 acaácido
 acaãense
-Ácaba
+�?caba
 acabaçar
 acabadelar
 acabadiço
@@ -3124,7 +3124,7 @@ accepção
 accessível
 accessório
 acciano
-Áccio
+�?ccio
 Accioli
 acciolismo
 accionar
@@ -6228,7 +6228,7 @@ Adiel
 adiemórrise
 adietar
 adil
-Ádila
+�?dila
 adilar
 Adílio
 Adílson
@@ -7661,7 +7661,7 @@ agabe
 agabelo
 agabeno
 agábio
-Ágabo
+�?gabo
 agácar
 agacé
 agacéfalo
@@ -8857,7 +8857,7 @@ Agudo-SP
 Agudos-SP
 agué
 águe
-Águeda
+�?gueda
 agueirar
 agueiro
 águem
@@ -9243,7 +9243,7 @@ ajaua
 ajaular
 ajavardar
 Ajax
-Ájax
+�?jax
 ajé
 ajedra
 ajeirar
@@ -10425,7 +10425,7 @@ alcidião
 Alcídio
 Alcido
 alcímaco
-Álcimo
+�?lcimo
 Alcindo
 alcinha
 alcino
@@ -11477,7 +11477,7 @@ alfineteiro
 alfinetes-da-terra
 alfinetes-de-dama
 alfinetes-de-toucar
-Álfio
+�?lfio
 alfir
 alfirme
 alfirmeira
@@ -12036,7 +12036,7 @@ aliconazol
 alicuí
 alícula
 aliculária
-Álida
+�?lida
 alidade
 alidor
 alienação
@@ -12259,7 +12259,7 @@ alissíneo
 alisso
 alisso-cheiroso
 alissoide
-Álisson
+�?lisson
 alissos-cheirosos
 alistar
 alistável
@@ -13893,7 +13893,7 @@ alvarengueiro
 alvarenguense
 alvarense
 alvarento
-Álvares
+�?lvares
 alvariça
 alvaricoque
 alvaricoqueiro
@@ -13903,7 +13903,7 @@ alvarinho
 alvarista
 alvarístico
 alvarizado
-Álvaro
+�?lvaro
 álvaro-carvalhense
 alvaroco
 alvaroque
@@ -15262,7 +15262,7 @@ Amiclas
 amicleano
 amicles
 amicleu
-Ámico
+�?mico
 amicrônico
 amicrose
 amíctico
@@ -17793,7 +17793,7 @@ andrio
 androcefaloide
 androcentrismo
 androceu
-Ándrocles
+�?ndrocles
 androdínamo
 androdioicismo
 androfagia
@@ -23224,7 +23224,7 @@ arabana
 arabata
 árabe
 árabe-brasileiro
-Árabe-Brasileiro
+�?rabe-Brasileiro
 árabe-israelense
 árabe-saudita
 arabebéu
@@ -24412,8 +24412,8 @@ arco-da-velha
 arco-de-pipa
 arco-de-pipa-miúdo
 arco-íris
-Arco-Íris
-Arco-Íris-SP
+Arco-�?ris
+Arco-�?ris-SP
 arco-irisado
 arco-irisar
 arco-irisense
@@ -25123,7 +25123,7 @@ Ariel
 arielesco
 Ariene
 ariepiglótico
-Áries
+�?ries
 arieta
 arietar
 arietário
@@ -25422,7 +25422,7 @@ Arli
 Arlindo
 Arline
 arlique
-Árlisson
+�?rlisson
 arlota
 arlotia
 arma
@@ -26728,13 +26728,13 @@ artelete
 artelho
 artemágico
 artemão
-Ártemas
+�?rtemas
 artemeter
 arteméter
 artêmide
 Artemidoro
 artêmio
-Ártemis
+�?rtemis
 artemisense
 artemísia
 artemísia-brava
@@ -27544,7 +27544,7 @@ asfodelino
 asfódelo
 Asgabate
 asgardiano
-Ásia-Pacífico
+�?sia-Pacífico
 asiânico
 asianismo
 asianístico
@@ -28764,7 +28764,7 @@ atalhense
 Atalia
 Atália
 Ataliba
-Átalo
+�?talo
 atamã
 atamancação
 atamancum
@@ -29131,7 +29131,7 @@ atingível
 atínia
 atinos
 atinotoxêmico
-Átio
+�?tio
 atipamezol
 atipia
 atipicamente
@@ -29160,7 +29160,7 @@ atirocarpo
 atiroideiazinha
 atiroideu
 atiroidia
-Átis
+�?tis
 atitar
 atitude
 atitudinal
@@ -29899,7 +29899,7 @@ aurantíneo
 aurar
 aurato
 auraúna
-Áurea-RS
+�?urea-RS
 aurécia
 aurela
 aurélia
@@ -30172,7 +30172,7 @@ austrapiroleno
 austrasiano
 austrásio
 Austregésilo
-Áustria
+�?ustria
 austríaco
 austrífero
 austrino
@@ -31117,7 +31117,7 @@ axapona
 axaraca
 axe
 axé
-Áxel
+�?xel
 axelho
 axênico
 axetilcefuroxima
@@ -31403,7 +31403,7 @@ azelastina
 azélia
 azélide
 azeloínico
-Ázem
+�?zem
 azemafor
 azêmala
 azemel
@@ -50099,7 +50099,7 @@ caixa-baixa
 caixa-bomba
 caixa-clara
 caixa-d'água
-Caixa-d'Água
+Caixa-d'�?gua
 caixa-d'aguense
 caixa-d'óculos
 caixa-dos-pirolitos
@@ -66169,7 +66169,7 @@ chimparrear
 chimporrada
 chimu
 China
-China-África
+China-�?frica
 chinaço
 chinada
 chinar
@@ -86156,13 +86156,13 @@ d'Abadia-GO
 d'aço
 d'Aço
 D'Aço
-d'África
+d'�?frica
 d'agora
 d'água
-d'Água
-D'Água
-d'Água-MG
-d'Água-PB
+d'�?gua
+D'�?gua
+d'�?gua-MG
+d'�?gua-PB
 d'Ajuda
 D'Ajuda
 d'Ajuda-SE
@@ -86192,8 +86192,8 @@ d'Arco-TO
 d'arte
 d'Arte
 D'Arte
-d'Ávila
-d'Ávila-BA
+d'�?vila
+d'�?vila-BA
 d'El-Rei
 d'Estado
 d'Oeste
@@ -153405,7 +153405,7 @@ ibirubaense
 ibirube
 ibirubense
 íbis
-Íbis
+�?bis
 íbis-branco
 íbis-sagrado
 Ibitiara
@@ -153529,7 +153529,7 @@ icariba
 icariense
 icário
 ícaro
-Ícaro
+�?caro
 icástico
 icatibanto
 Icatu
@@ -156169,7 +156169,7 @@ inclinação
 inclinar
 inclinável
 ínclito
-Ínclito
+�?nclito
 inclucação
 includir
 incluir
@@ -156578,7 +156578,7 @@ indexificador
 indexificante
 indexificar
 indi
-Índia
+�?ndia
 indiada
 indialita
 indiamã
@@ -156643,7 +156643,7 @@ indicionarizável
 indicioso
 indicível
 índico
-Índico
+�?ndico
 indicolita
 indictado
 indictivo
@@ -156711,12 +156711,12 @@ indinhar
 índio-estanho
 índio-gálio-fósforo
 índio-gigante
-Índios-AL
+�?ndios-AL
 índios-cavaleiros
 índios-gigantes
-Índios-PB
-Índios-RS
-Índios-SP
+�?ndios-PB
+�?ndios-RS
+�?ndios-SP
 indiozinho
 indiqueta
 Indira
@@ -160724,7 +160724,7 @@ isindense
 isio
 isiodense
 isiondense
-Ísis
+�?sis
 isistíida
 isistiídeo
 isístio
@@ -161623,7 +161623,7 @@ Itabuna
 Itabuna-BA
 itabunense
 itaca
-Ítaca
+�?taca
 Itacajá
 Itacajá-TO
 itacajaense
@@ -161789,7 +161789,7 @@ Itajuípe-BA
 itajuipense
 itajuruense
 itajutibense
-Ítala
+�?tala
 italatria
 italátrico
 italegrense
@@ -204355,8 +204355,8 @@ myanmense
 mycoplasma
 n
 n'água
-n'Água
-N'Água
+n'�?gua
+N'�?gua
 n'alma
 n'Alma
 N'Alma
@@ -213482,7 +213482,7 @@ olho-cia
 olho-cozido
 olho-d'agua
 olho-d'água
-Olho-d'Água
+Olho-d'�?gua
 olho-d'aguense
 olho-de-água
 olho-de-boi
@@ -213531,8 +213531,8 @@ olhos-brancos
 olhos-cia
 olhos-cozidos
 olhos-d'água
-Olhos-d'Água
-Olhos-d'Água-MG
+Olhos-d'�?gua
+Olhos-d'�?gua-MG
 olhos-de-água
 olhos-de-boi
 olhos-de-boi-dos-herbolários
